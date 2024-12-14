@@ -5,6 +5,8 @@ import 'package:myapp/app/modules/dosen/views/dosen_add_view.dart';
 import 'package:myapp/app/modules/dosen/views/dosen_view.dart';
 import 'package:myapp/app/modules/mahasiswa/views/mahasiswa_add_view.dart';
 import 'package:myapp/app/modules/mahasiswa/views/mahasiswa_view.dart';
+import 'package:myapp/app/modules/pegawai/views/pegawai_add_view.dart';
+import 'package:myapp/app/modules/pegawai/views/pegawai_view.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -36,15 +38,13 @@ class _DashboardAdminState extends State<DashboardAdmin> {
       'view': MahasiswaView(),
       'add': () => MahasiswaAddView()
     },
-    {
-      'title': 'Data Dosen',
-      'view': DosenView(),
-      'add': () => DosenAddView()
-    },
+    {'title': 'Data Dosen', 
+    'view': DosenView(),
+    'add': () => DosenAddView()},
     {
       'title': 'Data Pegawai',
-      'view': MahasiswaView(),
-      'add': () => MahasiswaAddView()
+      'view': PegawaiView(),
+      'add': () => PegawaiAddView()
     },
   ];
 
