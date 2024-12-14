@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "217080597327",
+    "project_id": "latihan-22312013",
+    "storage_bucket": "latihan-22312013.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217080597327:android:74852bf3f539abf4ba133a",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217080597327-h4gdvsjtq0v8ld7nj16nlhv3hkn3b8k7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD36GRayHNcMq8zQdIliBWi3oxr6rI8ajM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217080597327-h4gdvsjtq0v8ld7nj16nlhv3hkn3b8k7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217080597327:android:f42719b4e16dcee1ba133a",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217080597327-h4gdvsjtq0v8ld7nj16nlhv3hkn3b8k7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD36GRayHNcMq8zQdIliBWi3oxr6rI8ajM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217080597327-h4gdvsjtq0v8ld7nj16nlhv3hkn3b8k7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217080597327:android:1077aa0bd67b7182ba133a",
+        "android_client_info": {
+          "package_name": "com.latihanFlutter.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217080597327-8fgvbflr7b1lqngfnmn7the2e50jdsh6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.latihanFlutter.android",
+            "certificate_hash": "92e38bba9846b6251bcc758a10c41f1d7359a3ad"
+          }
+        },
+        {
+          "client_id": "217080597327-h4gdvsjtq0v8ld7nj16nlhv3hkn3b8k7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD36GRayHNcMq8zQdIliBWi3oxr6rI8ajM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217080597327-h4gdvsjtq0v8ld7nj16nlhv3hkn3b8k7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
