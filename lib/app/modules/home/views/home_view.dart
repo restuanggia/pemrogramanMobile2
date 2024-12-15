@@ -38,9 +38,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
       'view': MahasiswaView(),
       'add': () => MahasiswaAddView()
     },
-    {'title': 'Data Dosen', 
-    'view': DosenView(),
-    'add': () => DosenAddView()},
+    {'title': 'Data Dosen', 'view': DosenView(), 'add': () => DosenAddView()},
     {
       'title': 'Data Pegawai',
       'view': PegawaiView(),
