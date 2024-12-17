@@ -3,38 +3,43 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class PegawaiController extends GetxController {
+class KaryawanController extends GetxController {
   //TODO: Implement MahasiswaController
-  late TextEditingController cNip;
+  late TextEditingController cNo;
   late TextEditingController cNama;
-  late TextEditingController cPangkat;
+  late TextEditingController cJabatan;
 
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   // ignore: non_constant_identifier_names
   Future<QuerySnapshot<Object?>> GetData() async {
-    CollectionReference pegawai = firestore.collection('pegawai');
+    CollectionReference karyawan = firestore.collection('karyawan_22312013');
 
-    return pegawai.get();
+    return karyawan.get();
   }
 
   Stream<QuerySnapshot<Object?>> streamData() {
-    CollectionReference pegawai = firestore.collection('pegawai');
-    return pegawai.snapshots();
+    CollectionReference karyawan = firestore.collection('karyawan_22312013');
+    return karyawan.snapshots();
   }
 
-  void add(String nip, String nama, String pangkat) async {
-    CollectionReference pegawai = firestore.collection("pegawai");
+  void add(
+      String no_karyawan, String nama_karyawan, String jabatan_karyawan) async {
+    CollectionReference karyawan = firestore.collection("karyawan_22312013");
 
     try {
-      await pegawai.add({"nip": nip, "nama": nama, "pangkat": pangkat});
+      await karyawan.add({
+        "no_karyawan": no_karyawan,
+        "nama_karyawan": nama_karyawan,
+        "jabatan_karyawan": jabatan_karyawan
+      });
       Get.defaultDialog(
           title: "Berhasil",
           middleText: "Berhasil menyimpan data pegawai",
           onConfirm: () {
-            cNip.clear();
+            cNo.clear();
             cNama.clear();
-            cPangkat.clear();
+            cJabatan.clear();
             Get.back();
             Get.back();
             Get.back();
@@ -45,30 +50,37 @@ class PegawaiController extends GetxController {
       print(e);
       Get.defaultDialog(
         title: "Terjadi Kesalahan",
-        middleText: "Gagal Menambahkan Pegawai.",
+        middleText: "Gagal Menambahkan Karyawan.",
       );
     }
   }
 
   Future<DocumentSnapshot<Object?>> getData(String id) async {
-    DocumentReference docRef = firestore.collection("pegawai").doc(id);
+    DocumentReference docRef =
+        firestore.collection("karyawan_22312013").doc(id);
 
     return docRef.get();
   }
 
-  void Update(String nip, String nama, String pangkat, String id) async {
-    DocumentReference pegawaiById = firestore.collection("pegawai").doc(id);
+  void Update(String no_karyawan, String nama_karyawan, String jabatan_karyawan,
+      String id) async {
+    DocumentReference karyawanById =
+        firestore.collection("karyawan_22312013").doc(id);
 
     try {
-      await pegawaiById.update({"nip": nip, "nama": nama, "pangkat": pangkat});
+      await karyawanById.update({
+        "no_karyawan": no_karyawan,
+        "nama_karyawan": nama_karyawan,
+        "jabatan_karyawan": jabatan_karyawan
+      });
 
       Get.defaultDialog(
         title: "Berhasil",
-        middleText: "Berhasil mengubah data Pegawai.",
+        middleText: "Berhasil mengubah data Karyawan.",
         onConfirm: () {
-          cNip.clear();
+          cNo.clear();
           cNama.clear();
-          cPangkat.clear();
+          cJabatan.clear();
           Get.back();
           Get.back();
           Get.back();
@@ -79,13 +91,14 @@ class PegawaiController extends GetxController {
       print(e);
       Get.defaultDialog(
         title: "Terjadi Kesalahan",
-        middleText: "Gagal Menambahkan Pegawai.",
+        middleText: "Gagal Merubah Karyawan.",
       );
     }
   }
 
   void delete(String id) {
-    DocumentReference docRef = firestore.collection("pegawai").doc(id);
+    DocumentReference docRef =
+        firestore.collection("karyawan_22312013").doc(id);
 
     try {
       Get.defaultDialog(
@@ -96,7 +109,7 @@ class PegawaiController extends GetxController {
           Get.back();
           Get.defaultDialog(
             title: "Sukses",
-            middleText: "Berhasil menghapus data pegawai",
+            middleText: "Berhasil menghapus data karyawan",
           );
         },
         textConfirm: "Ya",
@@ -114,18 +127,18 @@ class PegawaiController extends GetxController {
   @override
   void onInit() {
     // TODO: implement onInit
-    cNip = TextEditingController();
+    cNo = TextEditingController();
     cNama = TextEditingController();
-    cPangkat = TextEditingController();
+    cJabatan = TextEditingController();
     super.onInit();
   }
 
   @override
   void onClose() {
     // TODO: implement onClose
-    cNip.dispose();
+    cNo.dispose();
     cNama.dispose();
-    cPangkat.dispose();
+    cJabatan.dispose();
     super.onClose();
   }
 }

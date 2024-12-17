@@ -2,13 +2,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:myapp/app/modules/pegawai/controllers/pegawai_controller.dart';
-import 'package:myapp/app/modules/pegawai/views/pegawai_update_view.dart';
+import 'package:myapp/app/modules/karyawan/controllers/karyawan_controller.dart';
+import 'package:myapp/app/modules/karyawan/views/karyawan_update_view.dart';
 // import 'package:myapp/app/modules/mahasiswa/views/mahasiswa_update_view.dart';
 // import '../controllers/dosen_controller.dart';
 
-class PegawaiView extends GetView<PegawaiController> {
-  const PegawaiView({super.key});
+class KaryawanView extends GetView<KaryawanController> {
+  const KaryawanView({super.key});
 
   void showOption(id) async {
     var result = await Get.dialog(
@@ -18,7 +18,7 @@ class PegawaiView extends GetView<PegawaiController> {
             onTap: () {
               Get.back();
               Get.to(
-                const PegawaiUpdateView(),
+                const KaryawanUpdateView(),
                 arguments: id,
               );
             },
@@ -44,7 +44,7 @@ class PegawaiView extends GetView<PegawaiController> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot<Object?>>(
-      stream: Get.put(PegawaiController()).streamData(),
+      stream: Get.put(KaryawanController()).streamData(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.active) {
           // mengambil data
@@ -58,15 +58,15 @@ class PegawaiView extends GetView<PegawaiController> {
                       backgroundColor: Color.fromARGB(255, 248, 248, 248),
                     ),
                     title: Text(
-                      "${(listAllDocs[index].data() as Map<String, dynamic>)["nama"]}",
+                      "${(listAllDocs[index].data() as Map<String, dynamic>)["nama_karyawan"]}",
                     ),
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                            "${(listAllDocs[index].data() as Map<String, dynamic>)["nip"]}"),
+                            "${(listAllDocs[index].data() as Map<String, dynamic>)["no_karyawan"]}"),
                         Text(
-                            "${(listAllDocs[index].data() as Map<String, dynamic>)["pangkat"]}"),
+                            "${(listAllDocs[index].data() as Map<String, dynamic>)["jabatan_karyawan"]}"),
                       ],
                     ),
                     trailing: IconButton(

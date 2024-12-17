@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:myapp/app/controllers/auth_controller.dart';
 import 'package:myapp/app/modules/dosen/views/dosen_add_view.dart';
 import 'package:myapp/app/modules/dosen/views/dosen_view.dart';
+import 'package:myapp/app/modules/karyawan/views/karyawan_add_view.dart';
+import 'package:myapp/app/modules/karyawan/views/karyawan_view.dart';
 import 'package:myapp/app/modules/mahasiswa/views/mahasiswa_add_view.dart';
 import 'package:myapp/app/modules/mahasiswa/views/mahasiswa_view.dart';
-import 'package:myapp/app/modules/pegawai/views/pegawai_add_view.dart';
-import 'package:myapp/app/modules/pegawai/views/pegawai_view.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -40,9 +40,9 @@ class _DashboardAdminState extends State<DashboardAdmin> {
     },
     {'title': 'Data Dosen', 'view': DosenView(), 'add': () => DosenAddView()},
     {
-      'title': 'Data Pegawai',
-      'view': PegawaiView(),
-      'add': () => PegawaiAddView()
+      'title': 'Karyawan_22312013',
+      'view': KaryawanView(),
+      'add': () => KaryawanAddView()
     },
   ];
 
@@ -137,7 +137,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
               Get.back();
             },
             leading: const Icon(Icons.people),
-            title: const Text('Data Pegawai'),
+            title: const Text('Karyawan_22312013'),
             trailing: const Icon(Icons.navigate_next),
             iconColor: Colors.blue,
             textColor: Colors.blue,
