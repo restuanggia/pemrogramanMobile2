@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/app/modules/karyawan/controllers/karyawan_controller.dart';
 import 'package:myapp/app/modules/karyawan/views/karyawan_update_view.dart';
-// import 'package:myapp/app/modules/mahasiswa/views/mahasiswa_update_view.dart';
-// import '../controllers/dosen_controller.dart';
 
 class KaryawanView extends GetView<KaryawanController> {
   const KaryawanView({super.key});
